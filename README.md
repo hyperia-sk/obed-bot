@@ -30,9 +30,9 @@ git clone https://github.cm/hyperia-sk/obed-bot.git && cd obed-bot
 #### Krok 2.
 
 Pre správne fungovanie slack bota je potrebné získať `SLACK_API_TOKEN`:
-- vztvorte si novú [bot integration](https://my.slack.com/services/new/bot)
+- vytvorte si novú [bot integration](https://my.slack.com/services/new/bot)
 - uložte `SLACK_API_TOKEN` zo stránky pre úpravu BOTa do vášho nastavenia slack-u ([Custom integrations](https://<name>.slack.com/apps/manage/custom-integrations) > Bots > :pencil2: Edit configuration)
-- vytvorte súbor `.env` a vložte doňho: `SLACK_API_TOKEN=rofl-01234567890-TokenSlacku`
+- vytvorte súbor `.env` a vložte doň: `SLACK_API_TOKEN=rofl-01234567890-TokenSlacku`
 
 #### Krok 3.
 

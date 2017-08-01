@@ -1,5 +1,7 @@
 # Obed Slack Bot
 
+[![Build Status](https://travis-ci.org/hyperia-sk/obed-bot.svg?branch=master)](https://travis-ci.org/hyperia-sk/obed-bot)
+
 Slack bot, ktorý na požiadanie kontroluje aktuálnu ponuku denného menu reštaurácii, 
 výsledok zobrazuje v miestnosti alebo v rámci osobnej konverzácie. 
 

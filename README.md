@@ -2,20 +2,24 @@
 
 [![Build Status](https://travis-ci.org/hyperia-sk/obed-bot.svg?branch=master)](https://travis-ci.org/hyperia-sk/obed-bot)
 
-Slack bot, ktorý na požiadanie kontroluje aktuálnu ponuku denného menu reštaurácii, 
-výsledok zobrazuje v miestnosti alebo v rámci osobnej konverzácie. 
+Slack bot, ktorý na požiadanie kontroluje aktuálnu ponuku denného menu reštaurácií. 
+
+Výsledok zobrazuje v miestnosti alebo v rámci osobnej konverzácie. 
 
 Denné menu získava so stránok bistro.sk a restauracie.sme.sk
 
 ## Zoznam základných príkazov:
 
 #### `co je dnes na obed?` vypíše zoznam všetkých reštaurácii spolu s ich denným menu,
+
 ![screenshot from 2017-07-31 20-02-14](https://user-images.githubusercontent.com/6382002/28791040-5ee569ea-762b-11e7-875b-69e4f0e00eee.png) 
 
 #### `kam na obed` vyvolá hodnotenie s anketou "Kam pôjdeme na obed?"
+
 ![screenshot from 2017-07-31 20-02-34](https://user-images.githubusercontent.com/6382002/28791042-5ef03690-762b-11e7-90cd-7b239dec4c5d.png)
 
 #### `co je v <nazov restauracie>` napríklad `co je v kazacku`, `co je v kusku` pre získanie denného menu pre konkrétnu reštauráciu,
+
 ![screenshot from 2017-07-31 20-03-07](https://user-images.githubusercontent.com/6382002/28791041-5eeb4450-762b-11e7-9fe0-a3220ed9017e.png)
 
 #### `ahoj` `cau` `zdar` `cus` pre slušné pozdravenie bota
@@ -25,7 +29,7 @@ Denné menu získava so stránok bistro.sk a restauracie.sme.sk
 
 #### Krok 1.
 
-```javascript
+```bash
 git clone https://github.cm/hyperia-sk/obed-bot.git && cd obed-bot
 ```
 
@@ -38,7 +42,7 @@ Pre správne fungovanie slack bota je potrebné získať `SLACK_API_TOKEN`:
 
 #### Krok 3.
 
-```javascript
+```js
 npm install
 
 # spúšťanie:

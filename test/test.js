@@ -4,7 +4,7 @@ var Config = require('../config');
 var Scraper = require('../scraper');
 
 describe('config', function() {
-    
+
     it('is config object', function() {
         assert.isTrue('object' === typeof Config);
     });
@@ -18,7 +18,7 @@ describe('config', function() {
         assert.isDefined(rst.timestamp);
         assert.isDefined(rst.items);
     });
-    
+
     Object.keys(Config).map(function(objectKey, index) {
         it('test key '+objectKey, function() {
             assert.isArray(Config.MAX_VOTE_EMOJIS);
@@ -49,10 +49,7 @@ describe('scraper', function() {
 
     it('scrape menue', function(){
         scraper.getMenue('kusokstastia').then(function (result) {
-            
             assert.isNotEmpty(result.items);
-            console.log( result.items );
-            
         });
     });
 

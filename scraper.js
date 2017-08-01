@@ -70,9 +70,6 @@ Scraper.prototype.getAllMenus = function () {
  */
 Scraper.prototype.downloadMenu = function (idSource) {
     var self = this;
-
-    console.log('download menu: ' + idSource);
-
     return new Promise(function (resolve, reject) {
         var parseMenueData = function (err, body) {
             if (err) {

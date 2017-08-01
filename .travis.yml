@@ -1,8 +1,8 @@
 language: node_js
 
 before_script:
-  - npm install -g mocha
-  - npm install -g chai
+  - npm install mocha
+  - npm install chai
 
 node_js:
   - "lts/*"

@@ -30,7 +30,7 @@ Denné menu získava so stránok bistro.sk a restauracie.sme.sk
 #### Krok 1.
 
 ```bash
-git clone https://github.cm/hyperia-sk/obed-bot.git && cd obed-bot
+git clone https://github.com/hyperia-sk/obed-bot.git && cd obed-bot
 ```
 
 #### Krok 2.

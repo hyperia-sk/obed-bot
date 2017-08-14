@@ -3,13 +3,13 @@ var expect = require('chai').expect;
 var Config = require('../config');
 var Scraper = require('../scraper');
 
-describe('config', function() {
+describe('config', function () {
 
-    it('is config object', function() {
+    it('should be object', function () {
         assert.isTrue('object' === typeof Config);
     });
 
-    it('is set config restaurant', function() {
+    it('should have config restaurant', function () {
         var rst = Config.sources.kusokstastia;
         assert.equal('Kúsok Šťastia', rst.name);
         assert.isDefined(rst.web);
@@ -19,8 +19,8 @@ describe('config', function() {
         assert.isDefined(rst.items);
     });
 
-    Object.keys(Config).map(function(objectKey, index) {
-        it('test key '+objectKey, function() {
+    Object.keys(Config).map(function (objectKey, index) {
+        it('should have key ' + objectKey, function () {
             assert.isArray(Config.MAX_VOTE_EMOJIS);
             assert.isNotEmpty(Config.MAX_VOTE_EMOJIS);
             assert.isNotEmpty(Config[objectKey]);
@@ -28,29 +28,59 @@ describe('config', function() {
     });
 });
 
-describe('scraper', function() {
-    var scraper = new Scraper();
+describe('scraper', function () {
+    var scraper;
 
-    it('is object', function() {
+    beforeEach('init scraper', function () {
+        scraper = new Scraper();
+    });
+
+    it('should be object', function () {
+        assert.instanceOf(scraper, Scraper);
         assert.isObject(scraper);
     });
-    
-    it('is not empty offer', function(){
+
+    it('should have offers', function () {
         assert.isNotEmpty(scraper.offer);
     });
-    
-    it('is set max age', function(){
+
+    it('maxAge is higher then zero', function () {
         assert.isTrue(scraper.maxAge > 0);
     });
-    
-    it('is set actual day', function(){
+
+    it('should day is string', function () {
+        assert.isNotEmpty(scraper._getDay());
         assert.isString(scraper._getDay());
     });
 
-    it('scrape menue', function(){
+    it('scrape menue', function () {
         scraper.getMenue('kusokstastia').then(function (result) {
             assert.isNotEmpty(result.items);
         });
+    });
+    
+    it('download menue', function () {
+        scraper.downloadMenu('kusokstastia').then(function (result) {
+            assert.isNotEmpty(result.items);
+        });
+    });
+
+    it('scrape all menues', function () {
+        scraper.getAllMenus().then(function (result) {
+            assert.isNotEmpty(result.items);
+        });
+    });
+    
+    it('should parser bistro empty', function () {
+        scraper.parserBistro('', 'kusokstastia');
+        assert.equal(scraper.offer.kusokstastia.items[0].name, '\nponuka nebola zverejnená :disappointed:\n');
+        assert.equal(scraper.offer.kusokstastia.items[0].price, '');
+    });
+    
+    it('should parser restauracie sme empty', function () {
+        scraper.parserRestauracieSme('', 'vulcano');
+        assert.equal(scraper.offer.vulcano.items[0].name, '\nponuka nebola zverejnená :disappointed:\n');
+        assert.equal(scraper.offer.vulcano.items[0].price, '');
     });
 
 });

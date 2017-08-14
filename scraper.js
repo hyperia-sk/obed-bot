@@ -144,7 +144,7 @@ Scraper.prototype.parserBistro = function (buffer, idSource) {
 
     } else {
         data.push({
-            name: '\nponuka nebola zverejnená :(\n',
+            name: '\nponuka nebola zverejnená :disappointed:\n',
             price: ''
         });
     }
@@ -166,18 +166,26 @@ Scraper.prototype.parserRestauracieSme = function (buffer, id) {
     var data = [];
     var skDay = this._getDay();
 
-    data.push({
-        name: '\nponuka na *' + skDay.toLowerCase() + '*\n',
-        price: ''
-    });
-
-    $('.dnesne_menu .jedlo_polozka').each(function (idx, el) {
-        var element = $(el);
+    var selector = $('.dnesne_menu .jedlo_polozka');
+    if( selector.length > 0 ) {
         data.push({
-            name: '\n' + element.find('div').text().trim(), // + ' _(' + el.find('span.desc').text().trim() + ')_',
-            price: element.find('span').text().trim()
+            name: '\nponuka na *' + skDay.toLowerCase() + '*\n',
+            price: ''
         });
-    });
+
+        selector.each(function (idx, el) {
+            var element = $(el);
+            data.push({
+                name: '\n' + element.find('div').text().trim(), // + ' _(' + el.find('span.desc').text().trim() + ')_',
+                price: element.find('span').text().trim()
+            });
+        });
+    } else {
+        data.push({
+            name: '\nponuka nebola zverejnená :disappointed:\n',
+            price: ''
+        });
+    }
 
     this.offer[id]['timestamp'] = Date.now();
     this.offer[id]['items'] = data;

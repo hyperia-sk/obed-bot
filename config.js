@@ -45,7 +45,7 @@ module.exports = {
             timestamp: 0,
             items: []
         },
-        rmut {
+        rmut: {
             name: "Pivarska Bašta Rmut",
             web: 'https://www.bistro.sk/pivarska-basta-rmut/',
             parser: 'parserBistro',

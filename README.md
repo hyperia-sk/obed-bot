@@ -59,4 +59,9 @@ forever start -w bot.js
 pozvite `@<meno-vasho-bota>` do miestnosti alebo otvorte s ním priamu komunikáciu
 
 
+#### Testy
+
+```bash
+npm test
+```
 

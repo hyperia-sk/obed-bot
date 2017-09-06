@@ -44,6 +44,13 @@ module.exports = {
             parser: 'parserBistro',
             timestamp: 0,
             items: []
+        },
+        rmut: {
+            name: "Pivarska Bašta Rmut",
+            web: 'https://www.bistro.sk/pivarska-basta-rmut/',
+            parser: 'parserBistro',
+            timestamp: 0,
+            items: []
         }
     },
 
@@ -93,7 +100,7 @@ module.exports = {
     // @todo "(aka je) ponuka pre kazacok"
     // @todo "(ake je) denne menu pre kazacok"
     "QUESTION_BY_RESTAURANT": [
-        "(?=[cč]o.*(?=hraj[úu]|maj[úu]|d[aá]vaj[úu]|varia|je.*na.*obed|je)).*[v|vo]*.*(k[uú]sku|kaza[cč]ku|vul[ck][aá]n[eo]|kolib[a|e]|kolibke|milan[eo])"
+        "(?=[cč]o.*(?=hraj[úu]|maj[úu]|d[aá]vaj[úu]|varia|je.*na.*obed|je)).*[v|vo]*.*(k[uú]sku|kaza[cč]ku|vul[ck][aá]n[eo]|kolib[a|e]|kolibke|milan[eo]|rmute|ba[šs]te)"
     ],
 
     // pole "vtipnych" gif obrazkov pre zobrazenie v ankete
@@ -127,6 +134,10 @@ module.exports = {
         {
             "regex": "milan[oe]",
             "source": "milano"
+        },
+        {
+            "regex": "rmut|ba[šs]t[ea]",
+            "source": "rmut"
         }
     ],
 

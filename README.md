@@ -1,6 +1,7 @@
 # Obed Slack Bot 
 
 [![Build Status](https://travis-ci.org/hyperia-sk/obed-bot.svg?branch=master)](https://travis-ci.org/hyperia-sk/obed-bot)
+[![Known Vulnerabilities](https://snyk.io/test/github/hyperia-sk/obed-bot/badge.svg)](https://snyk.io/test/github/hyperia-sk/obed-bot)
 
 > only for slovak|czech users
 

@@ -12,7 +12,9 @@
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js",
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "slack",
@@ -32,8 +34,10 @@
     "dotenv": "^2.0.0",
     "encoding": "^0.1.12",
     "node-schedule": "^1.0.0",
-    "request": "^2.69.0"
+    "request": "^2.69.0",
+    "snyk": "^1.65.1"
   },
-  "homepage": "https://github.com/hyperia-sk/obed-bot/README.md"
+  "homepage": "https://github.com/hyperia-sk/obed-bot/README.md",
+  "snyk": true
 }
 

@@ -27,7 +27,7 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "@slack/client": "^2.0.6",
+    "@slack/client": "^3.5.1",
     "botkit": "0.4.4",
     "chance": "^1.0.1",
     "cheerio": "^0.20.0",

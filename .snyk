@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.10.2
+version: v1.13.3
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -13,3 +13,8 @@ patch:
         patched: '2018-01-07T11:42:11.236Z'
     - botkit > node-ews > debug > ms:
         patched: '2018-02-25T17:17:34.822Z'
+  SNYK-JS-AXIOS-174505:
+    - '@slack/client > axios':
+        patched: '2019-05-08T01:53:01.436Z'
+    - botkit > localtunnel > axios:
+        patched: '2019-05-08T01:53:01.436Z'

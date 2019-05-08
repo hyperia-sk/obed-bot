@@ -35,7 +35,7 @@
     "encoding": "^0.1.12",
     "node-schedule": "^1.0.0",
     "request": "^2.69.0",
-    "snyk": "^1.69.9"
+    "snyk": "^1.162.0"
   },
   "homepage": "https://github.com/hyperia-sk/obed-bot/README.md",
   "snyk": true
